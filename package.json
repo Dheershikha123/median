@@ -1,0 +1,33 @@
+{
+  "name": "median",
+  "version": "1.0.0",
+  "description": "A closed-loop wrapper around `agy` (Antigravity CLI). Instead of stopping after one shot, it checks the result, decides whether the code is done, and feeds a targeted fix back to `agy` automatically, up to 4 times. If it still can't finish, it writes an escalation report instead of returning unverified code.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manv-3/median.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/manv-3/median/issues"
+  },
+  "homepage": "https://github.com/manv-3/median#readme",
+  "dependencies": {
+    "@types/node": "^26.6.3",
+    "execa": "^10.0.1",
+    "typescript": "^7.0.2"
+  },
+  "devDependencies": {
+    "tsx": "^4.23.15",
+    "vitest": "^5.0.3"
+  }
+}
