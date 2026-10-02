@@ -28,7 +28,11 @@ export function classifyFailure(err: any): 'environment' | 'timeout' | 'code_bug
 
 export async function runAgy(prompt: string): Promise<AgyResult> {
     try {
-        const { stdout, stderr, exitCode } = await execa('agy', ['run', '--prompt', prompt], {
+        const { stdout, stderr, exitCode } = await execa('agy', [
+            '--print', prompt,
+            '--output-format', 'json',
+            '--dangerously-skip-permissions'
+        ], {
             timeout: 120000
         });
 

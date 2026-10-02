@@ -37,7 +37,11 @@ describe('runAgy', () => {
 
         const result = await runAgy('my prompt');
 
-        expect(execaMock).toHaveBeenCalledWith('agy', ['run', '--prompt', 'my prompt'], { timeout: 120000 });
+        expect(execaMock).toHaveBeenCalledWith('agy', [
+            '--print', 'my prompt',
+            '--output-format', 'json',
+            '--dangerously-skip-permissions'
+        ], { timeout: 120000 });
         expect(result).toStrictEqual({
             stdout: 'success output',
             stderr: '',
